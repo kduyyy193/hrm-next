@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "K12",
+      "sex": "male",
+      "image": "/assets/man.png",
+      "date": "1995/11/17",
+      "dateJoined": "2022/10/22",
+      "address": "vietnam",
+      "salary": "$500",
+      "group": "pm"
+    },
+    {
+      "id": "2",
+      "name": "Johny",
+      "sex": "male",
+      "image": "/assets/boy.png",
+      "date": "2000/3/28",
+      "dateJoined": "2021/5/11",
+      "address": "singapore",
+      "salary": "$900",
+      "group": "it"
+    },
+    {
+      "id": "3",
+      "name": "Lucas",
+      "sex": "male",
+      "image": "/assets/boy.png",
+      "date": "2003/8/11",
+      "dateJoined": "2023/7/4",
+      "address": "france",
+      "salary": "$700",
+      "group": "it"
+    },
+    {
+      "id": "4",
+      "name": "Émilie",
+      "sex": "female",
+      "image": "/assets/girl.png",
+      "date": "2000/5/30",
+      "dateJoined": "2024/5/18",
+      "address": "switzerland",
+      "salary": "$1000",
+      "group": "design"
+    }
+  ]
+}
