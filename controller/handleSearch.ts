@@ -1,5 +1,5 @@
 import { User as typeUser } from "../models/User.model";
-export const searchHandler = (
+export const handleSearch = (
   users: typeUser[],
   value: string,
   setFilterUsers: React.Dispatch<React.SetStateAction<typeUser[]>>

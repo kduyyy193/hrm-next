@@ -8,7 +8,7 @@
       "date": "1995/11/17",
       "dateJoined": "2022/10/22",
       "address": "vietnam",
-      "salary": "$500",
+      "salary": "500",
       "group": "pm"
     },
     {
@@ -19,7 +19,7 @@
       "date": "2000/3/28",
       "dateJoined": "2021/5/11",
       "address": "singapore",
-      "salary": "$900",
+      "salary": "900",
       "group": "it"
     },
     {
@@ -30,7 +30,7 @@
       "date": "2003/8/11",
       "dateJoined": "2023/7/4",
       "address": "france",
-      "salary": "$700",
+      "salary": "700",
       "group": "it"
     },
     {
@@ -41,7 +41,7 @@
       "date": "2000/5/30",
       "dateJoined": "2024/5/18",
       "address": "switzerland",
-      "salary": "$1000",
+      "salary": "1000",
       "group": "design"
     }
   ]

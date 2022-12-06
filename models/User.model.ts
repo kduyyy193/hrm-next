@@ -17,6 +17,8 @@ export interface HandleUser {
     funcHandler: Function
 }
 
-export interface Data {
-    users: User[]
+export type Params = {
+	params: {
+		userId: string
+	}
 }

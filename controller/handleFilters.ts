@@ -1,5 +1,5 @@
 import { User as UserType } from "../models/User.model";
-export const filtersHandler = (
+export const handleFilters = (
   users: UserType[],
   value: string,
   name: string,
