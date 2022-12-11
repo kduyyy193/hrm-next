@@ -2,47 +2,55 @@
   "users": [
     {
       "id": "1",
-      "name": "K12",
+      "name": "Nguyen Phu Dong",
       "sex": "male",
-      "image": "/assets/man.png",
-      "date": "1995/11/17",
+      "image": "  /assets/phudong.jpeg",
+      "date": "2003/8/14",
       "dateJoined": "2022/10/22",
       "address": "vietnam",
       "salary": "500",
-      "group": "pm"
+      "group": "pm",
+      "description": "Ở Việt Nam, khái niệm Công nghệ Thông tin được hiểu và định nghĩa trong Nghị quyết Chính phủ 49/CP ký ngày 4 tháng 8 năm 1993: Công nghệ thông tin là tập hợp các phương pháp khoa học, các phương tiện và công cụ kĩ thuật hiện đại - chủ yếu là kĩ thuật máy tính và viễn thông - nhằm tổ chức khai thác và sử dụng có hiệu quả các nguồn tài nguyên thông tin rất phong phú và tiềm năng trong mọi lĩnh vực hoạt động của con người và xã hội.",
+      "hobby": "Play video game, play video game and play video game..."
     },
     {
       "id": "2",
-      "name": "Johny",
+      "name": "Tran Quoc Hung",
       "sex": "male",
-      "image": "/assets/boy.png",
-      "date": "2000/3/28",
+      "image": "  /assets/quochung.jpeg",
+      "date": "2003/5/27",
       "dateJoined": "2021/5/11",
       "address": "singapore",
       "salary": "900",
-      "group": "it"
+      "group": "it",
+      "description": "Công nghệ thông tin, viết tắt CNTT, (tiếng Anh: Information technology hay là IT) là một nhánh ngành kỹ thuật sử dụng máy tính và phần mềm máy tính để chuyển đổi, lưu trữ, bảo vệ, xử lý, truyền tải và thu thập thông tin.[1] ",
+      "hobby": "Play sport, picnic,..."
     },
     {
       "id": "3",
-      "name": "Lucas",
+      "name": "Nguyen Khanh Duy",
       "sex": "male",
-      "image": "/assets/boy.png",
-      "date": "2003/8/11",
+      "image": "  /assets/khanhduy.jpeg",
+      "date": "2003/3/19",
       "dateJoined": "2023/7/4",
       "address": "france",
       "salary": "700",
-      "group": "it"
+      "group": "it",
+      "description": "Thuật ngữ Công nghệ thông tin xuất hiện lần đầu vào năm 1958 trong bài viết xuất bản tại tạp chí Harvard Business Review. Hai tác giả của bài viết, Leavitt và Whisler đã bình luận: Công nghệ mới chưa thiết lập một tên riêng. Chúng ta sẽ gọi là công nghệ thông tin (Information Technology - IT).",
+      "hobby": "Read book, films,..."
     },
     {
       "id": "4",
-      "name": "Émilie",
+      "name": "Phan Tuong Duy",
       "sex": "female",
-      "image": "/assets/girl.png",
-      "date": "2000/5/30",
+      "image": "  /assets/tuongduy.jpeg",
+      "date": "2003/8/14",
       "dateJoined": "2024/5/18",
       "address": "switzerland",
       "salary": "1000",
-      "group": "design"
+      "group": "design",
+      "description": "Các lĩnh vực chính của công nghệ thông tin bao gồm quá trình tiếp thu, xử lý, lưu trữ và phổ biến hóa âm thanh, phim ảnh, văn bản và thông tin số bởi các vi điện tử dựa trên sự kết hợp giữa máy tính và truyền thông.[4] Một vài lĩnh vực hiện đại và nổi bật của công nghệ thông tin như: các tiêu chuẩn Web thế hệ tiếp theo, sinh tin học, điện toán đám mây, hệ thống thông tin toàn cầu, tri thức quy mô lớn và nhiều lĩnh vực khác. Các nghiên cứu phát triển chủ yếu trong ngành khoa học máy tính.",
+      "hobby": "Cats, selfie,..."
     }
   ]
 }

@@ -4,9 +4,9 @@ import UsersComponent from '../../components/Users'
 
 const UsersPage = ({ users }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <>
+    <div className='p-4 px-8'>
         <UsersComponent users={users} />
-    </>
+    </div>
   )
 }
 

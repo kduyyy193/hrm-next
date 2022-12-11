@@ -44,7 +44,7 @@ const UserDetailsPage = ({ user }: InferGetStaticPropsType<typeof getStaticProps
   const router = useRouter();
 
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return <h2 className="mx-auto text-2xl ">Loading...</h2>;
   }
 
   return (

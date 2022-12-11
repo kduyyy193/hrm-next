@@ -7,7 +7,9 @@ export interface User {
     date: string,
     dateJoined: string,
     salary: string,
-    group: string
+    group: string,
+    description: string,
+    hobby: string,
 }
 
 
@@ -21,4 +23,8 @@ export type Params = {
 	params: {
 		userId: string
 	}
+}
+
+export type Data = {
+    users: User[]
 }

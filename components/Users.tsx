@@ -50,8 +50,7 @@ const Users = ({ users }: DataType) => {
             />
           </svg>
         </div>
-        <p className="mx-2">Avatar</p>
-        <div
+          <div
           onClick={() => {
             handler.handleSortByString(
               "name",
@@ -61,7 +60,7 @@ const Users = ({ users }: DataType) => {
               setFilterUsers
             );
           }}
-          className=" mx-2 w-1/12  text-center capitalize flex justify-center items-center"
+          className=" mx-2 w-2/12  text-center capitalize flex justify-center items-center"
         >
           Name
           <svg width="24" height="24" viewBox="0 0 15 15">
