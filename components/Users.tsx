@@ -18,7 +18,7 @@ const Users = ({ users }: DataType) => {
   return (
     <>
       <div className="flex justify-between py-4 pt-8">
-        <h3 className="text-2xl font-semibold">Employee</h3>
+        <h3 className="text-2xl font-semibold">Menbers</h3>
         <SearchComponet
           funcHandler={(value: string) => {
             handler.handleSearch(users, value, setFilterUsers);

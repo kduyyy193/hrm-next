@@ -14,10 +14,14 @@
     "@types/react-dom": "18.0.9",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.6",
+    "formik": "^2.2.9",
+    "lord-icon-element": "^4.0.1",
     "next": "13.0.6",
     "react": "18.2.0",
+    "react-custom-alert": "^1.0.4",
     "react-dom": "18.2.0",
-    "typescript": "4.9.3"
+    "typescript": "4.9.3",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

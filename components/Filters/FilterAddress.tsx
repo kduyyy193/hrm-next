@@ -15,7 +15,7 @@ const SexFilter = (props: HandleUser) => {
         defaultValue="all"
       >
         <option  value="all">Address</option>
-        <option value="vietnam">Vietname</option>
+        <option value="vietnam">Vietnam</option>
         <option value="singapore">Singapore</option>
         <option value="france">France</option>
         <option value="switzerland">Switzerland</option>
