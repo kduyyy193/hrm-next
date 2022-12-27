@@ -14,7 +14,7 @@ export default UsersPage
 
 
 export async function  getStaticProps() {
-    const res = await fetch('http://localhost:3004/users')
+    const res = await fetch('https://hrm-api-nodejs.onrender.com/users')
     const data = await res.json()
   
     return {

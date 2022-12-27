@@ -3,6 +3,8 @@ import React, { Dispatch, SetStateAction } from 'react'
 import * as yup from "yup"
 import { useFormik } from "formik"
 import { useRouter } from 'next/router'
+import { User } from '../models/User.model'
+import axios from 'axios'
 
 
 const AddUser = ({ setShowAddUser, setShowNotifiModal }: {
@@ -10,6 +12,18 @@ const AddUser = ({ setShowAddUser, setShowNotifiModal }: {
     setShowNotifiModal: Dispatch<SetStateAction<boolean>>
 }) => {
     const router = useRouter()
+
+    const postData = async  (data: User) => {
+        try {
+            const res = await axios.post("https://hrm-api-nodejs.onrender.com/users", data)
+            if(res) {
+                setShowNotifiModal(false)
+                router.push('/users')
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     const AddUserSchema = yup.object({
         name: yup
@@ -34,6 +48,7 @@ const AddUser = ({ setShowAddUser, setShowNotifiModal }: {
             name: '',
             sex: 'male',
             date: '',
+            dateJoined: new Date(),
             address: 'vietnam',
             salary: '',
             description: '',
@@ -41,17 +56,22 @@ const AddUser = ({ setShowAddUser, setShowNotifiModal }: {
             hobby: '',
         },
         validationSchema: AddUserSchema,
-        onSubmit: (values: any) => {
-            console.log(JSON.stringify(values, null, 2))
+        onSubmit: async (values: any) => {
+            console.log(values)
             setShowAddUser(false)
             setShowNotifiModal(true)
-            setTimeout(() => {
-                setShowNotifiModal(false)
-                setTimeout(() => {
+            postData(values)
+            // if (await res.then) {
+            //     setShowNotifiModal(false)
+            //     router.push('/users')
 
-                    router.push('/users')
-                }, 500)
-            }, 1500);
+            // }
+            // setTimeout(() => {
+            //     setShowNotifiModal(false)
+            //     setTimeout(() => {
+
+            //     }, 500)
+            // }, 1500);
         },
     })
 

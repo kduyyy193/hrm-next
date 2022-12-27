@@ -3,9 +3,9 @@ export interface User {
     name: string,
     sex: string,
     address: string,
-    image: string,
-    date: string,
-    dateJoined: string,
+    image?: string,
+    date: Date,
+    dateJoined: Date,
     salary: string,
     group: string,
     description: string,
@@ -28,3 +28,10 @@ export type Params = {
 export type Data = {
     users: User[]
 }
+
+export type UserFilter = {
+    sex: string,
+    address: string,
+    group: string,
+    ignoreKey?: string
+  }

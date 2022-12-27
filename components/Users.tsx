@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Data as DataType, User as UserType } from "../models/User.model";
+import React, { useEffect, useState } from "react";
+import { Data as DataType, User, User as UserType, UserFilter } from "../models/User.model";
 import { handler } from "../controller/index";
 import Filters from "./Filters";
 import SearchComponet from "./Search";
@@ -14,6 +14,33 @@ const Users = ({ users }: DataType) => {
   const [sortTypeName, setSortTypeName] = useState("asc");
   const [sortTypeSalary, setSortTypeSalary] = useState("asc");
   const [sortTypeID, setSortTypeID] = useState("asc");
+
+  let filterReq: UserFilter = {
+    sex: valueFilterSex,
+    address: valueFilterAddress,
+    group: valueFilterGroup,
+  }
+
+  useEffect(() => {
+
+    for (let key in filterReq) {
+      if (filterReq[key as keyof UserFilter] === 'all') {
+        delete filterReq[key as keyof UserFilter]
+      }
+    }
+
+    const results = users.filter(user => {
+      for (let key in filterReq) {
+        if (user[key as keyof UserType] === undefined || user[key as keyof UserType] !== filterReq[key as keyof UserFilter])
+          return false;
+      }
+      return true;
+    });
+
+    setFilterUsers(results);
+
+  }, [valueFilterAddress, valueFilterGroup, valueFilterSex])
+
 
   return (
     <>
@@ -50,7 +77,7 @@ const Users = ({ users }: DataType) => {
             />
           </svg>
         </div>
-          <div
+        <div
           onClick={() => {
             handler.handleSortByString(
               "name",
@@ -85,14 +112,14 @@ const Users = ({ users }: DataType) => {
         </div>
         <Filters.Sex
           funcHandler={(value: string, name: string) => {
-            handler.handleFilters(users, value, name, setFilterUsers);
+            handler.handleFilters(users, value, name, filterReq, setFilterUsers);
           }}
           value={valueFilterSex}
           setValue={setValueFilterSex}
         />
         <Filters.Address
           funcHandler={(value: string, name: string) => {
-            handler.handleFilters(users, value, name, setFilterUsers);
+            handler.handleFilters(users, value, name, filterReq, setFilterUsers);
           }}
           value={valueFilterAddress}
           setValue={setValueFilterAddress}
@@ -102,7 +129,7 @@ const Users = ({ users }: DataType) => {
         </div>
         <Filters.Group
           funcHandler={(value: string, name: string) => {
-            handler.handleFilters(users, value, name, setFilterUsers);
+            handler.handleFilters(users, value, name, filterReq, setFilterUsers);
           }}
           value={valueFilterGroup}
           setValue={setValueFilterGroup}
