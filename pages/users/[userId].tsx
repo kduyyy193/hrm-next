@@ -3,13 +3,15 @@ import { useRouter } from "next/router";
 import React from "react";
 import UserDetailsComponent from "../../components/UserDetails";
 import { Params, User } from "../../models/User.model";
+import { url_api } from './index'
+
 
 export async function getStaticPaths() {
-  const response = await fetch("http://localhost:3004/users");
-  const data = await response.json();
-  const paths = data.map((item: User) => {
+  const res = await fetch(url_api!);
+  const data = await res.json();
+  const paths = data.map((user: User) => {
     return {
-      params: { userId: item.id },
+      params: { userId: user._id },
     };
   });
 
@@ -20,14 +22,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: Params) {
-  let response;
-  if (params) {
-    response = await fetch(`http://localhost:3004/users/${params.userId}`);
-  }
-  const data = await response?.json();
-  console.log(data)
+  const res = await fetch(`${url_api}/${params.userId}`);
+  const data = await res.json();
 
-  if (!data.id) {
+  if (!data._id) {
     return {
       notFound: true,
     };
