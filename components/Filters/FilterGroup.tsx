@@ -15,9 +15,9 @@ const SexFilter = (props: HandleUser) => {
         defaultValue="all"
       >
         <option  value="all">Group</option>
-        <option value="pm">PM</option>
+        <option value="pm">HR</option>
         <option value="it">IT</option>
-        <option value="design">Design</option>
+        <option value="design">DESIGN</option>
       </select>
     </div>
   );

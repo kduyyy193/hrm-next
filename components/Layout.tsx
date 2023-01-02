@@ -1,12 +1,13 @@
 import React, { ReactNode } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import Head from 'next/head'
 
 export type ChildLayout = {
-    children: React.ReactNode
+  children: React.ReactNode
 }
 
-const Layout = ({children}: ChildLayout) => {
+const Layout = ({ children }: ChildLayout) => {
   return (
     <div className='p-4 px-8 h-screen flex flex-col'>
       <Navbar />

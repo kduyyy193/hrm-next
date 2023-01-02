@@ -32,7 +32,6 @@ const newDateJoined = yearJoined + "/" + monthJoined + "/" + dayJoined;
   };
     return (
     <Link href={"/users/" + props._id} title="Detail Employee" className={getClass("user", ViewList.default)}>
-      {props.id && <p className="mx-4">{props.id} .</p>}
       <div className=" mx-2 w-2/12 flex justify-center items-center  text-center capitalize">{props.name}</div>
       <div className=" mx-2 w-1/12 flex justify-center items-center text-center">{newDate}</div>
       <div className=" mx-2 w-1/12 flex justify-center items-center text-center">{props.sex}</div>

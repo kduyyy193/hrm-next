@@ -1,10 +1,10 @@
 import React from 'react'
 
 
-const NotifiModal = () => {
+const NotifiModal = ({ top }: any) => {
   return (
-    <div className=' flex justify-end text-center'>
-        <div className='notifi px-8 py-2 rounded-lg w-64 bg-green-600 animate-bounce'>
+    <div className={`absolute text-center ${top} left-0 right-0  mx-auto w-64`}>
+        <div className='notifi px-8 py-2 rounded-lg  bg-green-600 animate-bounce'>
             Successfully!!!!
     </div>
     </div>

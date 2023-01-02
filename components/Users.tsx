@@ -4,16 +4,21 @@ import { handler } from "../controller/index";
 import Filters from "./Filters";
 import SearchComponet from "./Search";
 import UserComponent from "./User";
+import AddUser from "./AddUser";
+import NotifiModal from "./NotifiModal";
 
 const Users = ({ users }: DataType) => {
   let [filterUsers, setFilterUsers] = useState<UserType[]>(users);
+
   const [valueSearch, setValueSearch] = useState<string>("");
   const [valueFilterSex, setValueFilterSex] = useState<string>("all");
   const [valueFilterAddress, setValueFilterAddress] = useState<string>("all");
   const [valueFilterGroup, setValueFilterGroup] = useState<string>("all");
   const [sortTypeName, setSortTypeName] = useState("asc");
   const [sortTypeSalary, setSortTypeSalary] = useState("asc");
-  const [sortTypeID, setSortTypeID] = useState("asc");
+
+  const [showAddUser, setShowAddUser] = useState(false)
+  const [showNotifiModal, setShowNotifiModal] = useState(false)
 
   let filterReq: UserFilter = {
     sex: valueFilterSex,
@@ -54,29 +59,16 @@ const Users = ({ users }: DataType) => {
           setValue={setValueSearch}
         />
       </div>
+      <div className="min-w-max">
+        <h2 className='my-2 text-center px-4 font-semibold tracking-wider bg-blue-400 py-2 w-24 rounded-lg ml-auto hover:cursor-pointer hover:opacity-80' onClick={() => { setShowAddUser(true) }}>New+ </h2>
+        {
+          showAddUser && <AddUser setShowAddUser={setShowAddUser} setShowNotifiModal={setShowNotifiModal} />
+        }{
+
+          showNotifiModal && <NotifiModal top="top-6" />
+        }
+      </div>
       <div className="flex mt-4 p-2  justify-between relative  items-center border border-gray-500p-2 rounded-lg shadow hover:shadow-md cursor-pointer">
-        <div
-          onClick={() => {
-            handler.handleSortByNumber(
-              "id",
-              sortTypeID,
-              setSortTypeID,
-              filterUsers,
-              setFilterUsers
-            );
-          }}
-          className=" justify-center text-center capitalize flex items-center "
-        >
-          ID
-          <svg width="24" height="24" viewBox="0 0 15 15">
-            <path
-              fill="currentColor"
-              fillRule="evenodd"
-              d="M4.932 5.432a.45.45 0 1 0 .636.636L7.5 4.136l1.932 1.932a.45.45 0 0 0 .636-.636l-2.25-2.25a.45.45 0 0 0-.636 0l-2.25 2.25Zm5.136 4.136a.45.45 0 0 0-.636-.636L7.5 10.864L5.568 8.932a.45.45 0 0 0-.636.636l2.25 2.25a.45.45 0 0 0 .636 0l2.25-2.25Z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </div>
         <div
           onClick={() => {
             handler.handleSortByString(
